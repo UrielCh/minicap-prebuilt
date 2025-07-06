@@ -1,4 +1,4 @@
-const path = require('path');
+const { resolve } = require('path');
 
 /**
  * Return filesystem path to a prebuilt file using Node's require.resolve mechanism
@@ -6,12 +6,11 @@ const path = require('path');
  * @returns {string}
  */
 function getPrebuilt(file) {
-  const resourcePath = `minicap-prebuilt/prebuilt/${file}`;
-  return require.resolve(resourcePath);
+  return resolve(__dirname, 'prebuilt', file);
 }
 
 function getMinicapSO(abi, sdkLevel) {
-  if (!Number.isFinite(sdkLevel)) {
+  if (!Number.isInteger(sdkLevel)) {
     throw new Error('sdkLevel must be a number');
   }
   return getPrebuilt(`${abi}/lib/android-${sdkLevel}/minicap.so`);

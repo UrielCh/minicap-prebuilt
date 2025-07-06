@@ -2,28 +2,21 @@
  * return filesystem path to a prebuilt file
  * @param {string} file 
  */
-import { fileURLToPath } from 'url';
-import { dirname, resolve } from 'path';
+import { fileURLToPath } from 'node:url';
+import { dirname, resolve } from 'node:path';
 
 /**
  * return filesystem path to a prebuilt file
  * @param {string} file 
  */
 export function getPrebuilt(file) {
-  // Node.js ESM: use import.meta.resolve if available (Node.js v20.6+)
-  const resourcePath = `minicap-prebuilt/prebuilt/${file}`;
-  if (typeof import.meta.resolve === 'function') {
-    const url = import.meta.resolve(resourcePath, import.meta.url);
-    return fileURLToPath(url);
-  }
-  // Fallback for older Node.js versions
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = dirname(__filename);
   return resolve(__dirname, 'prebuilt', file);
 
 }
 export function getMinicapSO(abi, sdkLevel) {
-    if (!isNumber(sdkLevel)) {
+    if (!Number.isInteger(sdkLevel)) {
         throw new Error('sdkLevel must be a number');
     }
     return getPrebuilt(`${abi}/lib/android-${sdkLevel}/minicap.so`);

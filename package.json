@@ -1,6 +1,6 @@
 {
   "name": "@u4/minicap-prebuilt",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Prebuilt binaries of minicap for android 32+.",
   "keywords": [
     "minicap"
@@ -20,8 +20,8 @@
   },
   "license": "Apache-2.0",
   "author": {
-    "name": "DeviceFarmer",
-    "email": "support@devicefarmer.com",
+    "name": "UrielCh",
+    "email": "uchemouni@gmail.com",
     "url": "https://devicefarmer.github.io"
   },
   "repository": {
@@ -29,6 +29,9 @@
     "url": "https://github.com/UrielCh/minicap.git"
   },
   "files": [
-    "prebuilt"
+    "prebuilt",
+    "index.cjs",
+    "index.mjs",
+    "index.d.ts"
   ]
 }
