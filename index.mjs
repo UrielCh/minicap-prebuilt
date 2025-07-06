@@ -24,7 +24,7 @@ export function getMinicapSO(abi, sdkLevel) {
 
 export function getMinicapBin(abi, sdkLevel) {
     const minicapName = (sdkLevel >= 16) ? 'minicap' : 'minicap-nopie';
-    const binFile = getResource(`${abi}/bin/${minicapName}`);
+    const binFile = getPrebuilt(`${abi}/bin/${minicapName}`);
     return binFile;
 }
 
