@@ -40,3 +40,11 @@ export function getMinicapAPK() {
 export function getScrcpyJar(version) {
     return getPrebuilt(`scrcpy/scrcpy-server-v${version}.jar`);
 }
+
+export default {
+    getPrebuilt,
+    getMinicapSO,
+    getMinicapBin,
+    getMinicapAPK,
+    getScrcpyJar
+}
