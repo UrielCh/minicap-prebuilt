@@ -1,6 +1,6 @@
 {
   "name": "@u4/minicap-prebuilt",
-  "version": "2.0.0",
+  "version": "1.1.0",
   "description": "Prebuilt binaries of minicap for android 32+.",
   "keywords": [
     "minicap"

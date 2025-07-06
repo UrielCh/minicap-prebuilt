@@ -1,6 +1,5 @@
 # @u4/minicap-prebuilt
 
-
 `@u4/minicap-prebuilt` is an superseed of `@devicefarmer/minicap-prebuilt`
 
 it contains:

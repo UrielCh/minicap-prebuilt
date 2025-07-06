@@ -13,8 +13,8 @@ export function getPrebuilt(file) {
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = dirname(__filename);
   return resolve(__dirname, 'prebuilt', file);
-
 }
+
 export function getMinicapSO(abi, sdkLevel) {
     if (!Number.isInteger(sdkLevel)) {
         throw new Error('sdkLevel must be a number');
